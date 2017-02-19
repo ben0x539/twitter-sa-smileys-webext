@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "twitter sa smileys",
+  "version": "1.0",
+
+  "description": "parse sa smileys on twitter",
+
+  "permissions": [
+    "storage",
+    "*://i.somethingawful.com/*",
+    "*://fi.somethingawful.com/*",
+    "https://forums.somethingawful.com/misc.php?action=showsmilies"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.twitter.com/*"],
+      "js": ["src/apply-smileys.js"]
+    }
+  ]
+}
